@@ -1,0 +1,24 @@
+#== ITEMS NAMES
+item.Lunchbox.name=Lunchbox
+item.InsulationCloth.name=Insulation Cloth
+
+
+#== BLOCK NAMES
+tile.ElectricForge.name=Electric Forge
+tile.InductionForge.name=Induction Forge
+tile.Fridge.name=Fridge
+tile.DeepFreezer.name=Deep Freezer
+
+
+#== GUI ELEMENTS
+gui.Lunchbox.Help1=§7Sneak and §bRight Click §7to open.
+gui.Lunchbox.Help2=§7Hold §bRight Click §7to eat from.
+gui.Lunchbox.Part1=Contains
+gui.Lunchbox.Part2=items
+
+gui.EnergyUsage=Energy usage:
+gui.DecayRate=Decay rate:
+gui.Induction.Mode1=Mode: Work items
+gui.Induction.Mode2=Mode: Melt items
+gui.ElectricForge.TargetTemp=Target temperature
+gui.ElectricForge.Off=OFF

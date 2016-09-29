@@ -1,0 +1,15 @@
+[
+{
+  "modid": "tfcengineer",
+  "name": "TFC Engineer",
+  "description": "Terra firma craft engineer addon",
+  "version": "${version}",
+  "mcversion": "${mcversion}",
+  "url": "",
+  "updateUrl": "",
+  "authorList": ["Fair"],
+  "logoFile": "",
+  "screenshots": [],
+  "dependencies": []
+}
+]
