@@ -5,6 +5,7 @@ import com.bioxx.tfc.Core.TFC_Core;
 import com.bioxx.tfc.Items.ItemTerra;
 import com.bioxx.tfc.api.Enums.EnumSize;
 import com.bioxx.tfc.api.Enums.EnumWeight;
+import fair.tfcengineer.TFCEConfigs;
 import fair.tfcengineer.TFCEngineer;
 import fair.tfcengineer.common.GUI.GuiHandler;
 import net.minecraft.client.renderer.texture.IIconRegister;
@@ -78,7 +79,7 @@ public class ItemLunchbox extends TFCEMatItem {
     @Override
     public boolean onUpdate(ItemStack is, World world, int x, int y, int z) {
         InventoryItem storage = new InventoryItem(is);
-        storage.tickContent(world, x, y, z, 0.5f);
+        storage.tickContent(world, x, y, z, TFCEConfigs.lunchboxDecayRate);
         return true;
     }
 
