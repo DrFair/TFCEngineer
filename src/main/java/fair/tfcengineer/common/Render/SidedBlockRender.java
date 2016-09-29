@@ -18,6 +18,7 @@ public class SidedBlockRender implements ISimpleBlockRenderingHandler {
 
         renderer.setRenderBounds(min, min, min, max, max, max);
         renderInvBlock(block, metadata, renderer);
+        renderer.clearOverrideBlockTexture();
     }
 
     @Override
