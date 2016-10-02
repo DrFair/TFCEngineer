@@ -32,27 +32,27 @@ public class SidedBlockRender implements ISimpleBlockRenderingHandler {
         GL11.glTranslatef(-0.5F, -0.5F, -0.5F);
         tes.startDrawingQuads();
         tes.setNormal(0.0F, -1.0F, 0.0F);
-        renderer.renderFaceYNeg(block, 0.0D, 0.0D, 0.0D, renderer.getBlockIconFromSideAndMetadata(block, 0, m));
+        renderer.renderFaceYNeg(block, 0.0D, 0.0D, 0.0D, renderer.getBlockIconFromSideAndMetadata(block, 0, m)); // Bot
         tes.draw();
         tes.startDrawingQuads();
         tes.setNormal(0.0F, 1.0F, 0.0F);
-        renderer.renderFaceYPos(block, 0.0D, 0.0D, 0.0D, renderer.getBlockIconFromSideAndMetadata(block, 1, m));
+        renderer.renderFaceYPos(block, 0.0D, 0.0D, 0.0D, renderer.getBlockIconFromSideAndMetadata(block, 1, m)); // Top
         tes.draw();
         tes.startDrawingQuads();
         tes.setNormal(0.0F, 0.0F, -1.0F);
-        renderer.renderFaceZNeg(block, 0.0D, 0.0D, 0.0D, renderer.getBlockIconFromSideAndMetadata(block, 2, m));
+        renderer.renderFaceZNeg(block, 0.0D, 0.0D, 0.0D, renderer.getBlockIconFromSideAndMetadata(block, 2, m)); // North
         tes.draw();
         tes.startDrawingQuads();
         tes.setNormal(0.0F, 0.0F, 1.0F);
-        renderer.renderFaceZPos(block, 0.0D, 0.0D, 0.0D, renderer.getBlockIconFromSideAndMetadata(block, 3, m));
+        renderer.renderFaceZPos(block, 0.0D, 0.0D, 0.0D, renderer.getBlockIconFromSideAndMetadata(block, 3, m)); // South
         tes.draw();
         tes.startDrawingQuads();
         tes.setNormal(-1.0F, 0.0F, 0.0F);
-        renderer.renderFaceXNeg(block, 0.0D, 0.0D, 0.0D, renderer.getBlockIconFromSideAndMetadata(block, 4, m));
+        renderer.renderFaceXNeg(block, 0.0D, 0.0D, 0.0D, renderer.getBlockIconFromSideAndMetadata(block, 4, m)); // West
         tes.draw();
         tes.startDrawingQuads();
         tes.setNormal(1.0F, 0.0F, 0.0F);
-        renderer.renderFaceXPos(block, 0.0D, 0.0D, 0.0D, renderer.getBlockIconFromSideAndMetadata(block, 5, m));
+        renderer.renderFaceXPos(block, 0.0D, 0.0D, 0.0D, renderer.getBlockIconFromSideAndMetadata(block, 5, m)); // South
         tes.draw();
         GL11.glTranslatef(0.5F, 0.5F, 0.5F);
     }

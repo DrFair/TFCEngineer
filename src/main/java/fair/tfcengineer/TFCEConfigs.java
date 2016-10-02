@@ -42,8 +42,8 @@ public class TFCEConfigs {
         fridgeDecayRate = config.getFloat("fridgeDecayRate", CATEGORY_MISC, 0.25f, 0f, 1f, "Decay rate of items in fridge");
         deepFreezerDecayRate = config.getFloat("deepFreezerDecayRate", CATEGORY_MISC, 0f, 0f, 1f, "Decay rate of items in deep freezer");
         lunchboxDecayRate = config.getFloat("lunchboxDecayRate", CATEGORY_MISC, 0.5f, 0f, 1f, "Decay rate of items in the lunchbox");
-        electricForgeHeatRate = config.getFloat("electricForgeHeatRate", CATEGORY_MISC, 3f, 0.01f, 100f, "Electric forge item heat rate multiplier");
-        inductionForgeHeatRate = config.getFloat("inductionForgeHeatRate", CATEGORY_MISC, 6f, 0.01f, 100f, "Induction forge item heat rate multiplier");
+        electricForgeHeatRate = config.getFloat("electricForgeHeatRate", CATEGORY_MISC, 2f, 0.01f, 100f, "Electric forge item heat rate multiplier");
+        inductionForgeHeatRate = config.getFloat("inductionForgeHeatRate", CATEGORY_MISC, 3f, 0.01f, 100f, "Induction forge item heat rate multiplier");
 
 
 
