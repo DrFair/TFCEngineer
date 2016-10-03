@@ -108,17 +108,12 @@ public class PoweredForgeBaseTE extends PoweredMachineTE implements IInventory {
                                     units-= 100;
                                     moldItemStack.stackSize--;
 
-                                    EntityItem ei = new EntityItem(worldObj, xCoord + 0.5d, yCoord + 1.5d, zCoord + 0.5d, outputCopy); // This needs to be in front of oven
-                                    ei.motionX = 0;
-                                    ei.motionY = 0;
-                                    ei.motionZ = 0;
-                                    worldObj.spawnEntityInWorld(ei);
-
+                                    fillEmptySlot(outputCopy);
                                 } else if (units > 0) { // Put the last item in the forge cooking slot, replacing the input
                                     outputCopy.setItemDamage(100 - units);
                                     units = 0;
                                     moldItemStack.stackSize--;
-                                    setInventorySlotContents(slot, outputCopy.copy());
+                                    fillEmptySlot(outputCopy.copy());
                                 }
                             }
                         } else {
@@ -134,6 +129,31 @@ public class PoweredForgeBaseTE extends PoweredMachineTE implements IInventory {
                 }
             }
         }
+    }
+
+    // Finds empty slot in forge main inventory and puts item there, or drops the item in front of the forge.
+    private void fillEmptySlot(ItemStack is) {
+        for (int i = 0; i < 9; i++) {
+            if (getStackInSlot(i) == null && isItemValidForSlot(i, is)) {
+                setInventorySlotContents(i, is);
+                return;
+            }
+        }
+        double xOff = 0.5d; double yOff = 1.5d; double zOff = 0.5d;
+        if (frontSide == 2) { // North
+            xOff = 0.5d; yOff = 0.5d; zOff = -0.5d;
+        } else if (frontSide == 3) { // South
+            xOff = 0.5d; yOff = 0.5d; zOff = 1.5d;
+        } else if (frontSide == 4) { // West
+            xOff = -0.5d; yOff = 0.5d; zOff = 0.5d;
+        } else if (frontSide == 5) { // East
+            xOff = 1.5d; yOff = 0.5d; zOff = 0.5d;
+        }
+        EntityItem ei = new EntityItem(worldObj, xCoord + xOff, yCoord + yOff, zCoord + zOff, is); // This needs to be in front of oven
+        ei.motionX = 0;
+        ei.motionY = 0;
+        ei.motionZ = 0;
+        worldObj.spawnEntityInWorld(ei);
     }
 
     public ItemStack getCeramicMoldStack() {
