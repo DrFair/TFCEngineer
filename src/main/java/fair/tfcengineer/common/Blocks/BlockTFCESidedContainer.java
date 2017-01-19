@@ -57,8 +57,10 @@ public class BlockTFCESidedContainer extends BlockContainer implements ISize {
 
     @Override
     public void breakBlock(World world, int x, int y, int z, Block block, int meta) {
-        IInventory te = (IInventory) world.getTileEntity(x, y, z);
-        dropInventoryItems(world, x, y, z, te);
+        TileEntity te = world.getTileEntity(x, y, z);
+        if (te != null && te instanceof IInventory) {
+            dropInventoryItems(world, x, y, z, (IInventory) te);
+        }
         super.breakBlock(world, x, y, z, block, meta);
     }
 
