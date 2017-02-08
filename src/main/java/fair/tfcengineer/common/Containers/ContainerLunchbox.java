@@ -1,16 +1,19 @@
 package fair.tfcengineer.common.Containers;
 
+import com.bioxx.tfc.Containers.ContainerTFC;
+import com.bioxx.tfc.Core.Player.PlayerInventory;
 import fair.tfcengineer.common.Items.InventoryItem;
 import fair.tfcengineer.common.Items.ItemLunchbox;
 import fair.tfcengineer.common.Items.TFCEItems;
 import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.entity.player.InventoryPlayer;
 import net.minecraft.inventory.Container;
 import net.minecraft.inventory.IInventory;
 import net.minecraft.inventory.Slot;
 import net.minecraft.item.EnumAction;
 import net.minecraft.item.ItemStack;
 
-public class ContainerLunchbox extends Container {
+public class ContainerLunchbox extends ContainerTFC {
 
     protected InventoryItem item;
 
@@ -43,7 +46,7 @@ public class ContainerLunchbox extends Container {
     }
 
     @Override
-    public ItemStack transferStackInSlot(EntityPlayer player, int fromSlot) {
+    public ItemStack transferStackInSlotTFC(EntityPlayer player, int fromSlot) {
         ItemStack prev = null;
         Slot slot = (Slot) inventorySlots.get(fromSlot);
 

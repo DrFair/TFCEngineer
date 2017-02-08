@@ -1,5 +1,6 @@
 package fair.tfcengineer.common.Containers;
 
+import com.bioxx.tfc.Containers.ContainerTFC;
 import fair.tfcengineer.common.Containers.slots.SlotCeramicMold;
 import fair.tfcengineer.common.Containers.slots.SlotForge;
 import fair.tfcengineer.common.TileEntities.machines.PoweredForgeBaseTE;
@@ -9,7 +10,7 @@ import net.minecraft.inventory.IInventory;
 import net.minecraft.inventory.Slot;
 import net.minecraft.item.ItemStack;
 
-public class ContainerPoweredForge extends Container {
+public class ContainerPoweredForge extends ContainerTFC {
 
     protected PoweredForgeBaseTE te;
 
@@ -47,7 +48,7 @@ public class ContainerPoweredForge extends Container {
     }
 
     @Override
-    public ItemStack transferStackInSlot(EntityPlayer player, int fromSlot) {
+    public ItemStack transferStackInSlotTFC(EntityPlayer player, int fromSlot) {
         ItemStack prev = null;
         Slot slot = (Slot) inventorySlots.get(fromSlot);
 

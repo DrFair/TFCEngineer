@@ -1,5 +1,6 @@
 package fair.tfcengineer.common.Containers;
 
+import com.bioxx.tfc.Containers.ContainerTFC;
 import fair.tfcengineer.common.TileEntities.machines.FridgeBaseTE;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.inventory.Container;
@@ -7,7 +8,7 @@ import net.minecraft.inventory.IInventory;
 import net.minecraft.inventory.Slot;
 import net.minecraft.item.ItemStack;
 
-public class ContainerFridge extends Container {
+public class ContainerFridge extends ContainerTFC {
 
     protected FridgeBaseTE te;
 
@@ -40,7 +41,7 @@ public class ContainerFridge extends Container {
     }
 
     @Override
-    public ItemStack transferStackInSlot(EntityPlayer player, int fromSlot) {
+    public ItemStack transferStackInSlotTFC(EntityPlayer player, int fromSlot) {
         ItemStack prev = null;
         Slot slot = (Slot) inventorySlots.get(fromSlot);
 
