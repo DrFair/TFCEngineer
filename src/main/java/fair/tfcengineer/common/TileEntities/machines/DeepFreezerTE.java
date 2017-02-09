@@ -19,6 +19,6 @@ public class DeepFreezerTE extends FridgeBaseTE {
     }
 
     public int getRunCost(float workAmount) {
-        return 15; // RF per tick
+        return (int) (15 * TFCEConfigs.deepFreezerPowerMod); // RF per tick
     }
 }

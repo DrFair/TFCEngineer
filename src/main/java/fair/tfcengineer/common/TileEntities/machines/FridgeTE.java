@@ -19,6 +19,6 @@ public class FridgeTE extends FridgeBaseTE {
     }
 
     public int getRunCost(float workAmount) {
-        return 5; // RF per tick
+        return (int) (5 * TFCEConfigs.fridgePowerMod); // RF per tick
     }
 }
