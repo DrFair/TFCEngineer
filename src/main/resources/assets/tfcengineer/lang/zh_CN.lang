@@ -1,0 +1,24 @@
+#== ITEMS NAMES
+item.Lunchbox.name=午餐盒
+item.InsulationCloth.name=绝缘布料
+
+
+#== BLOCK NAMES
+tile.ElectricForge.name=电力锻造炉
+tile.InductionForge.name=感应锻造炉
+tile.Fridge.name=冰箱
+tile.DeepFreezer.name=深度冷冻柜
+
+
+#== GUI ELEMENTS
+gui.Lunchbox.Help1=按住shift右键打开午餐盒.
+gui.Lunchbox.Help2=按住右键吃里面的东西.
+gui.Lunchbox.Part1=内有
+gui.Lunchbox.Part2=食物
+
+gui.EnergyUsage=能量消耗:
+gui.DecayRate=衰变速率:
+gui.Induction.Mode1=Mode: 锻造
+gui.Induction.Mode2=Mode: 熔炼
+gui.ElectricForge.TargetTemp=目标温度
+gui.ElectricForge.Off=关
